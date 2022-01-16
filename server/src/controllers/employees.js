@@ -10,13 +10,16 @@ employeeController.getEmployee = async (req, res) => {
   res.json(employee);
 };
 employeeController.updateEmployee = async (req, res) => {
-  const updateEmployee = await Employee.findByIdAndUpdate(req.params.id, req.body);
+  const updateEmployee = await Employee.findByIdAndUpdate(
+    req.params.id,
+    req.body
+  );
   await updateEmployee.save();
-  res.json({status: "Employee updated"});
+  res.json({ status: "Employee updated" });
 };
 employeeController.deleteEmployee = async (req, res) => {
   await Employee.findOneAndDelete(req.params.id);
-  res.json({status: "Employee deleted successfully"});
+  res.json({ status: "Employee deleted successfully" });
 };
 employeeController.createEmployee = async (req, res) => {
   const newEmployee = new Employee({
