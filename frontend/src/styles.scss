@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-primary {
+  background-color: #272626 !important;
+}
+
+body {
+  min-height: 100vh;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.btn-group-form {
+  display: flex;
+  gap: 1em;
+  
+  &.left {
+    justify-content: flex-start;
+  }
+  &, &.right{
+    justify-content: flex-end;
+  }
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+button.btn-home {
+  @extend .justify-content-evenly;
+  @extend .align-items-center;
+  @extend .mx-auto;
+
+  height: 150px;
+  width: 225px;
+  text-align: left;
+}
