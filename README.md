@@ -28,9 +28,7 @@
 
 # Status
 
-- CRUD API Rest [Complete]
-- UI Design [Not Complete]
-- FrontEnd [Not Complete]
+- For status you can check the issues section -> [Here](https://github.com/jd-apprentice/MEAN-APP/issues/5)
 
 # Stack
 
