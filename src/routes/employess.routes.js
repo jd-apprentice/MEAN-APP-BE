@@ -1,12 +1,12 @@
 const { Router } = require("express")
-const router = Router();
+const routerEmployee = Router();
 
 const employeeController = require("../controllers/employees")
 
-router.get('/', employeeController.getEmployees)
+routerEmployee.get('/', employeeController.getEmployees)
 .post('/', employeeController.createEmployee)
 .get('/:id', employeeController.getEmployee)
 .put('/:id', employeeController.updateEmployee)
 .delete('/:id', employeeController.deleteEmployee)
 
-module.exports = router;
+module.exports = routerEmployee;
