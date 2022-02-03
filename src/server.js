@@ -5,12 +5,13 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 dotenv.config();
 
-app.set("port", process.env.DB_PORT || 5000);
+app.set("port", process.env.PORT || 5000);
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.listen(process.env.PORT);
 app.use("/api/employees", require("./routes/employess.routes"));
+app.use("/api/users", require("./routes/user.routes"));
 
 module.exports = app;
