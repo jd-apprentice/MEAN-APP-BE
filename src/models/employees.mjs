@@ -1,4 +1,5 @@
-const { Schema, model } = require("mongoose");
+import pkg from 'mongoose';
+const { Schema, model } = pkg;
 
 const employeeSchema = new Schema(
   {
@@ -34,4 +35,4 @@ const employeeSchema = new Schema(
   }
 );
 
-module.exports = model("Employee", employeeSchema);
+export default model("Employee", employeeSchema);
