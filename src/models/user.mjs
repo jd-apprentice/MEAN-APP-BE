@@ -1,10 +1,11 @@
-const { Schema, model } = require("mongoose");
+import pkg from 'mongoose';
+const { Schema, model } = pkg;
 
 const userScheema = new Schema(
     {   
         username: { type: String, required: true },
         password: { type: String, required: true },
-        isAdmin: { type: Boolean, required: true, default: false },
+        role: { type: String, required: true, default: "User", enum: ["User", "Admin"] },
     },
     {
         timestamps: true,
@@ -12,4 +13,4 @@ const userScheema = new Schema(
     }
 );
 
-module.exports = model("User", userScheema);
+export default model("User", userScheema);
