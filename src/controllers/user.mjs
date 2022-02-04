@@ -4,16 +4,12 @@ class UserController {
   async generateToken(req, res) {
     try {
       let jwtSecretKey = process.env.JWT_SECRET_KEY;
-      let data = {
-        time: Date(),
-        userId: 12,
-      };
-
+      let data = req.body
       const token = jwt.sign(data, jwtSecretKey);
 
       return res.send(token);
     } catch (error) {
-      console.log(error);
+      return res.status(401).send(error);
     }
   }
 
@@ -37,4 +33,4 @@ class UserController {
   }
 }
 
-export default UserController;
+export default new UserController();

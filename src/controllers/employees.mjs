@@ -6,8 +6,7 @@ class EmployeeController {
       const employees = await Employee.find();
       return res.json(employees);
     } catch (error) {
-      console.log(error);
-    }
+      return res.status(401).send(error);    }
   }
 
   async getEmployee(req, res) {
@@ -15,7 +14,7 @@ class EmployeeController {
       const employee = await Employee.findById(req.params.id);
       return res.json(employee);
     } catch (error) {
-      console.log(error);
+      return res.status(401).send(error);
     }
   }
 
@@ -26,7 +25,7 @@ class EmployeeController {
       await updateEmployee.save();
       return res.json({ status: "Employee updated" });
     } catch (error) {
-      console.log(error);
+      return res.status(401).send(error);
     }
   }
 
@@ -36,7 +35,7 @@ class EmployeeController {
       await Employee.findByIdAndDelete(id);
       return res.json({ status: "Employee deleted successfully" });
     } catch (error) {
-      console.log(error);
+      return res.status(401).send(error);
     }
   }
 
@@ -53,9 +52,9 @@ class EmployeeController {
       await newEmployee.save();
       return res.json({ message: "Employee saved successfully" });
     } catch (error) {
-      console.log(error);
+      return res.status(401).send(error);
     }
   }
 }
 
-export default EmployeeController;
+export default new EmployeeController();
