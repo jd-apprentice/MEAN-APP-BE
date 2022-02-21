@@ -1,7 +1,6 @@
-import { Router } from "express";
+import { Router } from 'express';
 const employeesRoutes = Router();
-
-import EmployeeController from "../controllers/employees.mjs";
+import EmployeeController from "../controllers/employees";
 
 employeesRoutes.get("/", EmployeeController.getEmployees)
 .post('/', EmployeeController.createEmployee)

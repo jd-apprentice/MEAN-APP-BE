@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
-import express from "express";
-import morgan from "morgan";
-import cors from "cors";
-import allRoutes from "./routes/index.mjs";
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
+import allRoutes from "./routes/index";
 const app = express();
 
 app.use(morgan("dev"));
