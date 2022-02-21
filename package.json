@@ -2,8 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "<img src=\"https://eezee.sg/blog/wp-content/uploads/2018/06/Artboard-3@3x-1200x675.png\">",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "dev": "nodemon src/index.ts",
     "start": "node ."
   },
