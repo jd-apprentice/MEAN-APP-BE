@@ -1,7 +1,7 @@
-import Employee from '../models/employees.mjs';
+import Employee from '../models/employees';
 
 class EmployeeController {
-  async getEmployees(req, res) {
+  async getEmployees(req: any, res: any) {
     try {
       const employees = await Employee.find();
       return res.json(employees);
@@ -9,7 +9,7 @@ class EmployeeController {
       return res.status(401).send(error);    }
   }
 
-  async getEmployee(req, res) {
+  async getEmployee(req:any, res:any) {
     try {
       const employee = await Employee.findById(req.params.id);
       return res.json(employee);
@@ -18,7 +18,7 @@ class EmployeeController {
     }
   }
 
-  async updateEmployee(req, res) {
+  async updateEmployee(req:any, res:any) {
     const { id } = req.params;
     try {
       const updateEmployee = await Employee.findByIdAndUpdate(id, req.body);
@@ -29,7 +29,7 @@ class EmployeeController {
     }
   }
 
-  async deleteEmployee(req, res) {
+  async deleteEmployee(req:any, res:any) {
     const { id } = req.params;
     try {
       await Employee.findByIdAndDelete(id);
@@ -39,7 +39,7 @@ class EmployeeController {
     }
   }
 
-  async createEmployee(req, res) {
+  async createEmployee(req:any, res:any) {
     try {
       const newEmployee = new Employee({
         firstName: req.body.firstName,

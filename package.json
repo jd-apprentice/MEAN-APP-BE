@@ -2,10 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "<img src=\"https://eezee.sg/blog/wp-content/uploads/2018/06/Artboard-3@3x-1200x675.png\">",
-  "main": "src/index.mjs",
-  "type": "module",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "nodemon src/index.mjs",
+    "dev": "nodemon src/index.ts",
     "start": "node ."
   },
   "keywords": [],
@@ -21,9 +20,14 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/morgan": "^1.9.3",
     "@types/node": "^17.0.8",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
   },
   "repository": {
     "type": "git",

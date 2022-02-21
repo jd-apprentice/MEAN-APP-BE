@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import employeesRoutes from './employees.routes.mjs';
-import userRoutes from './user.routes.mjs';
+import employeesRoutes from './employees.routes';
+import userRoutes from './user.routes';
 const allRoutes = Router();
 
 allRoutes.use('/employees', employeesRoutes);

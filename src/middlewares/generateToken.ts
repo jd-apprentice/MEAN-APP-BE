@@ -5,11 +5,12 @@ const generateJWT = (uid = "") => {
     const payload = { uid };
     jwt.sign(
       payload,
+      // @ts-ignore
       process.env.JWT_SECRET_KEY,
       {
         expiresIn: "4h",
       },
-      (error, token) => {
+      (error: any, token: any) => {
         if (error) reject("The token could not be generated");
         resolve(token);
       }
