@@ -17,7 +17,7 @@
 
 # Endpoints
 
-- BASE_URL is ```http://localhost:{PORT || 5000}/api/employees```
+- BASE_URL is ```http://localhost:{PORT || 3000}/api/employees```
 - Create_employee -> ```[POST]: "/"```
 - Update_employee -> ```[PUT]: "/:id"```
 - Delete_employee -> ```[DELETE]: "/:id"```
@@ -32,6 +32,7 @@
 
 ## Backend
 
+- Typescript
 - Mongodb
 - Express
 - Nodejs
