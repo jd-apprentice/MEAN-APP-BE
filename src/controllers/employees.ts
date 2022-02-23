@@ -1,6 +1,12 @@
 import Employee from '../models/employees';
 
 class EmployeeController {
+
+  /**
+   * @description: Get all employees
+   * @returns {Array<Employee>}
+   */
+
   async getEmployees(req: any, res: any) {
     try {
       const employees = await Employee.find();
@@ -8,6 +14,12 @@ class EmployeeController {
     } catch (error) {
       return res.status(401).send(error);    }
   }
+
+  /**
+   * @description: Get one employee
+   * @returns {Employee}
+   * @param {string} id
+  */
 
   async getEmployee(req:any, res:any) {
     try {
@@ -17,6 +29,12 @@ class EmployeeController {
       return res.status(401).send(error);
     }
   }
+
+  /**
+   * @description: Update employee
+   * @returns {Employee}
+   * @param {string} id
+  */
 
   async updateEmployee(req:any, res:any) {
     const { id } = req.params;
@@ -29,6 +47,12 @@ class EmployeeController {
     }
   }
 
+  /**
+   * @description: Delete employee
+   * @returns response
+   * @param {string} id
+  */
+
   async deleteEmployee(req:any, res:any) {
     const { id } = req.params;
     try {
@@ -38,6 +62,12 @@ class EmployeeController {
       return res.status(401).send(error);
     }
   }
+
+  /**
+   * @description: Create employee
+   * @returns response
+   * @param {Employee} firstName, lastName, email, phone, position, salary
+   */
 
   async createEmployee(req:any, res:any) {
     try {
