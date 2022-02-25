@@ -44,7 +44,3 @@
 - Angular
 - Typescript
 - Material
-
-## Contributors
-
-- [jd-apprentice](https://github.com/jd-apprentice)
