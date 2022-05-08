@@ -48,6 +48,10 @@
 - Typescript
 - Material
 
+## DBDiagram
+
+![MEAN-CRUD-BE (3)](https://user-images.githubusercontent.com/68082746/167313793-403fc1bd-3f67-4dda-9a7b-3e3857c13a6d.png)
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
